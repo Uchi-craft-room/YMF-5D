@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <aircraft-version>1.2</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/YMF-5D/YMF-5D-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/YMF-5D/Sounds/YMF-5D-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/YMF-5D/Models/YMF-5D.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+   <airport>
+        <runways>
+            <start-offset-m>20</start-offset-m>
+        </runways>
+    </airport>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>YMF-5D</title>
+      <key>
+       <name>k</name>
+       <desc>Smoke ON</desc>
+      </key>
+      <key>
+       <name>j</name>
+       <desc>Smoke OFF</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/YMF-5D-menu.xml"/>
+
+</sim>
+
+
+
+  <input>
+    <keyboard include="Nasal/YMF-5D-keyboard.xml"/>
+  </input>
+
+   <instrumentation>
+      <kma20 include="Aircraft/YMF-5D/Models/interior/Instruments/kma20/kma20init.xml"/>
+   </instrumentation>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/YMF-5D/Nasal/doors.nas</file>
+    </doors>
+    <YMF-5D>
+      <file>Aircraft/YMF-5D/Nasal/electrical.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/light.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/liveries.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/immat.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/instruments.nas</file>
+      <file>Aircraft/YMF-5D/Models/Interior/Instruments/kns80/KNS80.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/vhf22.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/vir32.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/kma20.nas</file>
+
+    </YMF-5D>    
+    <M877>
+     <file>Aircraft/YMF-5D/Models/interior/Instruments/M877/M877.nas</file>
+   </M877>
+   <nav_scripts>
+      <file>Aircraft/YMF-5D/Nasal/nav_scripts.nas</file>
+   </nav_scripts>
+  </nasal>
+
+</PropertyList>
+
