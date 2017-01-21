@@ -120,6 +120,34 @@ livery_update.stop();
   </animation>
 
 
+  <model>
+    <name>shadowOSG</name>
+    <path>Aircraft/YMF-5D/Models/shadow.xml</path>
+	<offsets>
+		<x-m> 0 </x-m>
+		<y-m> 0 </y-m>
+		<z-m> 0.25 </z-m>
+	</offsets>
+  </model>
+
+ <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+      <and>
+      <equals>
+        <property>/sim/rendering/rembrandt/enabled</property>
+        <value>false</value>
+      </equals>
+      <equals>
+        <property>/sim/replay/replay-state</property>
+        <value>0</value>
+      </equals>
+      <property>gear/gear/ground-is-solid</property>
+      </and>
+    </condition>
+  </animation>
+
 <model>
 	<path>Aircraft/YMF-5D/Models/engine/engine.ac</path>
 	<offsets>
@@ -548,6 +576,17 @@ livery_update.stop();
     </offsets>
   </model>
 
+    <model>
+        <name>nav-light-left</name>
+        <path>effects/lights/procedural_light_nav_left.xml</path>
+        <offsets>
+       <x-m> -0.7 </x-m>
+      <y-m> -4.65 </y-m>
+      <z-m>  1.15</z-m>
+        </offsets>
+    </model>
+
+
   <model>
     <name>Green</name>
     <path>Aircraft/YMF-5D/Models/light/GreenLight.xml</path>
@@ -558,6 +597,17 @@ livery_update.stop();
     </offsets>
   </model>
 
+    <model>
+        <name>nav-light-right</name>
+        <path>effects/lights/procedural_light_nav_right.xml</path>
+        <offsets>
+      <x-m> -0.7 </x-m>
+      <y-m>  4.65 </y-m>
+      <z-m>  1.15</z-m>
+        </offsets>
+    </model>
+
+
   <model>
     <name>Strobe0</name>
     <path>Aircraft/YMF-5D/Models/light/StrobeWhite.xml</path>
@@ -567,6 +617,7 @@ livery_update.stop();
       <z-m>  1.15</z-m>
     </offsets>
   </model>
+
 
   <model>
     <name>Strobe1</name>
@@ -588,9 +639,26 @@ livery_update.stop();
     </offsets>
   </model>
 
+   <model>
+        <name>nav-light-tail</name>
+        <path>effects/lights/procedural_light_nav_tail.xml</path>
+        <offsets>
+      <x-m> 4.15</x-m>
+      <y-m>  0 </y-m>
+      <z-m> 0.06 </z-m>
+      <pitch-deg> 0.00 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
+        </offsets>
+    </model>
+
   <animation>
     <type>select</type>
     <object-name>Tail-Light</object-name>
+        <object-name>nav-light-left</object-name>
+        <object-name>nav-light-right</object-name>
+        <object-name>nav-light-left</object-name>
+        <object-name>nav-light-tail</object-name>
+
     <condition>
           <property>controls/lighting/nav-lights</property>
     </condition>

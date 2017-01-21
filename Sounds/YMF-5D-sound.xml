@@ -397,7 +397,7 @@
     <and>
      <less-than>
        <property>velocities/airspeed-kt</property>
-       <value>60</value>
+       <value>40</value>
      </less-than>
     <not>
        <property>gear/gear[0]/wow</property>

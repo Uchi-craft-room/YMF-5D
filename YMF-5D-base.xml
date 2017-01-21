@@ -4,7 +4,7 @@
 
   <sim include="Nasal/views.xml">
 
-    <aircraft-version>1.2</aircraft-version>
+    <aircraft-version>1.4</aircraft-version>
 
     <fuel-fraction>1.0</fuel-fraction>
 
@@ -85,6 +85,7 @@
       <file>Aircraft/YMF-5D/Nasal/vhf22.nas</file>
       <file>Aircraft/YMF-5D/Nasal/vir32.nas</file>
       <file>Aircraft/YMF-5D/Nasal/kma20.nas</file>
+      <file>Aircraft/YMF-5D/Nasal/light-manager.nas</file>
     </YMF-5D>    
     <M877>
      <file>Aircraft/YMF-5D/Models/interior/Instruments/M877/M877.nas</file>
