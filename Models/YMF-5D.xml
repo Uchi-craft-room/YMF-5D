@@ -25,13 +25,14 @@
 
 
 <nasal>
-<load>
-var livery_update = aircraft.livery_update.new("Aircraft/YMF-5D/Models/Liveries");
-</load>
-<unload>
-livery_update.stop();
-</unload>
+	<load>
+	var livery_update = aircraft.livery_update.new("Aircraft/YMF-5D/Models/Liveries");
+	</load>
+	<unload>
+	livery_update.stop();
+	</unload>
 </nasal>
+
 
 <animation>
 <type>material</type>
@@ -643,11 +644,11 @@ livery_update.stop();
         <name>nav-light-tail</name>
         <path>effects/lights/procedural_light_nav_tail.xml</path>
         <offsets>
-      <x-m> 4.15</x-m>
-      <y-m>  0 </y-m>
-      <z-m> 0.06 </z-m>
-      <pitch-deg> 0.00 </pitch-deg>
-      <heading-deg> 180 </heading-deg>
+		<x-m> 4.15</x-m>
+		<y-m>  0 </y-m>
+		<z-m> 0.06 </z-m>
+		<pitch-deg> 0.00 </pitch-deg>
+		<heading-deg> 180 </heading-deg>
         </offsets>
     </model>
 
@@ -658,10 +659,9 @@ livery_update.stop();
         <object-name>nav-light-right</object-name>
         <object-name>nav-light-left</object-name>
         <object-name>nav-light-tail</object-name>
-
-    <condition>
-          <property>controls/lighting/nav-lights</property>
-    </condition>
+	<condition>
+		<property>controls/lighting/nav-lights</property>
+	</condition>
   </animation> 
 
   <model>
@@ -716,7 +716,7 @@ livery_update.stop();
     </condition>
   </animation> 
 
-<!-- Wing light cone--> 
+<!-- Wing light --> 
   <model>
     <name>LandingLight-Left</name>
    <path>Aircraft/YMF-5D/Models/light/Landinglight.xml</path>
@@ -729,20 +729,42 @@ livery_update.stop();
   </model>
 
   <model>
-    <name>LandingLight-Right</name>
-    <path>Aircraft/YMF-5D/Models/light/Landinglight.xml</path>
-    <offsets>
-      <x-m>  -0.4 </x-m>
-      <y-m>   2.25 </y-m>
-      <z-m>  -0.39 </z-m>
-      <pitch-deg> -10.00 </pitch-deg>
-    </offsets>
+	<name>LandingLight-Left_prc</name>
+        <path>effects/lights/procedural_light_nav_tail.xml</path>
+	<offsets>
+		<x-m>  -0.4 </x-m>
+		<y-m>  -2.25 </y-m>
+		<z-m>  -0.39 </z-m>
+	</offsets>
+  </model>
+
+  <model>
+	<name>LandingLight-Right</name>
+	<path>Aircraft/YMF-5D/Models/light/Landinglight.xml</path>
+	<offsets>
+		<x-m>-0.40 </x-m>
+		<y-m> 2.25 </y-m>
+		<z-m>-0.39 </z-m>
+		<pitch-deg> -10.00 </pitch-deg>
+	</offsets>
+  </model>
+
+  <model>
+	<name>LandingLight-Right_prc</name>
+        <path>effects/lights/procedural_light_nav_tail.xml</path>
+	<offsets>
+		<x-m>-0.40 </x-m>
+		<y-m> 2.25 </y-m>
+		<z-m>-0.39 </z-m>
+	</offsets>
   </model>
 
   <animation>
     <name>WingLight</name>
     <object-name>LandingLight-Left</object-name>
     <object-name>LandingLight-Right</object-name>
+    <object-name>LandingLight-Left_prc</object-name>
+    <object-name>LandingLight-Right_prc</object-name>
   </animation>
 
 
@@ -750,9 +772,9 @@ livery_update.stop();
     <type>select</type>
     <object-name>WingLight</object-name>
     <condition>
-        <equals>
-          <property>controls/switches/landing-light</property>
-          <value> 1 </value>
+	<equals>
+        	<property>controls/switches/landing-light</property>
+        	<value> 1 </value>
         </equals>
     </condition>
   </animation>
@@ -767,9 +789,9 @@ livery_update.stop();
     <name>TRAIL</name>
     <path>Aircraft/YMF-5D/Models/effects/trail/trailR.xml</path>
     <offsets>
-      <x-m>  -1.5 </x-m>
-      <y-m>   0 </y-m>
-      <z-m>  -0.8 </z-m>
+	<x-m>  -1.5 </x-m>
+	<y-m>   0 </y-m>
+	<z-m>  -0.8 </z-m>
     </offsets>
   </model>
 
